@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ProductData } from './productdata';
 import Image from 'next/image';
 
