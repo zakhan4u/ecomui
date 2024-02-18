@@ -16,16 +16,16 @@ const allproducts = () => {
     {ProductData.map((details)=>(
         <Card key={details.category}>
   <CardHeader>
-    <CardTitle>{details.make}</CardTitle>
+    <CardTitle key={details.imageURL}>{details.make}</CardTitle>
   </CardHeader>
   <CardContent>
-  <Image src={details.imageURL} alt="image data "  width={200} height={120}></Image>
+  <Image key={details.imageURL} src={details.imageURL} alt="image data "  width={200} height={120}></Image>
   </CardContent>
   <CardFooter>
-    <p>{details.name}</p>
+    <p key={details.imageURL}>{details.name}</p>
   </CardFooter>
   <CardHeader>
-    <CardTitle>{details.price}</CardTitle>
+    <CardTitle key={details.imageURL}>{details.price}</CardTitle>
   </CardHeader>
 </Card>
 

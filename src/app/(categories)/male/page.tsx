@@ -6,7 +6,7 @@ const males = () => {
     return (
         <div className='min-h-screen flex gap-5'>
             {ProductData.map((hosla)=>(
-                <h1>{hosla.category=== "male" ? (
+                <h1 key={hosla.imageURL}>{hosla.category=== "male" ? (
                     <div>
                     <Image  key={hosla.imageURL} src={hosla.imageURL} alt="image data "  width={200} height={120}></Image>
                     <p key={hosla.price}>{hosla.price}</p>

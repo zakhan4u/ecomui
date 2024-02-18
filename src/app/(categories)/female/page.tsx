@@ -16,8 +16,8 @@ const female = () => {
         {ProductData.map((hosla)=>(
             <h1 key={hosla.make}>{hosla.category=== "female" ? (
                 <Card>
-                <CardContent><Image src={hosla.imageURL} alt="image data "  width={200} height={120}></Image> </CardContent>
-                <CardFooter>{hosla.price}</CardFooter>
+                <CardContent><Image  key={hosla.imageURL} src={hosla.imageURL} alt="image data "  width={200} height={120}></Image> </CardContent>
+                <CardFooter key={hosla.imageURL}>{hosla.price}</CardFooter>
                 </Card>
             ):("")}</h1>
 

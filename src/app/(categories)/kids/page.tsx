@@ -18,7 +18,7 @@ const kidssection = () => {
                 <h1>{hosla.category=== "kids" ? (
                     <Card>
                    <CardContent> <Image key={hosla.imageURL} src={hosla.imageURL} alt="image data "  width={200} height={120}></Image> </CardContent>
-                   <CardFooter>{hosla.price}</CardFooter>
+                   <CardFooter key={hosla.imageURL}>{hosla.price}</CardFooter>
                    </Card>
                 ):("")}</h1>
 
