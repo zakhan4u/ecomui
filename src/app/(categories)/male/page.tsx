@@ -8,8 +8,8 @@ const males = () => {
             {ProductData.map((hosla)=>(
                 <h1>{hosla.category=== "male" ? (
                     <div>
-                    <Image src={hosla.imageURL} alt="image data "  width={200} height={120}></Image>
-                    <p>{hosla.price}</p>
+                    <Image  key={hosla.imageURL} src={hosla.imageURL} alt="image data "  width={200} height={120}></Image>
+                    <p key={hosla.price}>{hosla.price}</p>
                     </div>
                 ):("")}</h1>
 

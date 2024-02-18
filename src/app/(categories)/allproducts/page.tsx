@@ -14,7 +14,7 @@ const allproducts = () => {
  return (
     <div className='grid grid-cols-4'>
     {ProductData.map((details)=>(
-        <Card>
+        <Card key={details.category}>
   <CardHeader>
     <CardTitle>{details.make}</CardTitle>
   </CardHeader>

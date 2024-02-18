@@ -17,7 +17,7 @@ const kidssection = () => {
             {ProductData.map((hosla)=>(
                 <h1>{hosla.category=== "kids" ? (
                     <Card>
-                   <CardContent> <Image src={hosla.imageURL} alt="image data "  width={200} height={120}></Image> </CardContent>
+                   <CardContent> <Image key={hosla.imageURL} src={hosla.imageURL} alt="image data "  width={200} height={120}></Image> </CardContent>
                    <CardFooter>{hosla.price}</CardFooter>
                    </Card>
                 ):("")}</h1>
