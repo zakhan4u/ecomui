@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import { Input } from "@/components/ui/input"
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { CiSearch } from "react-icons/ci";
+import Image from "next/image";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +22,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+    
+      
+      <body className={inter.className}>
+     
+        <nav className="flex align-center justify-center flex-wrap px-12 gap-7 mt-6">
+        <Link href="./"><Image src="/logo.png" alt="logo" width={150} height={60}></Image></Link>
+        <Link href="./female">Female</Link>
+        <Link href="./male">Male</Link>
+        <Link href="./kids">kids</Link>
+        <Link href="./allproducts">All products</Link>
+        <div className="border flex"> <CiSearch /><input type="search here"></input></div>
+        <div className="w-10 h-10 rounded-full bg-slate-200 flex justify-center items-center relative">
+        <AiOutlineShoppingCart />
+        <div className="w-4 h-4 rounded-full flex justify-center items-center bg-red-500 absolute right-1 top-0">
+          <p className="text-white text-xs">0</p>
+        </div>
+        </div>
+        
+
+      </nav>
+      {children}
+      <Footer/>
+      </body>
     </html>
   );
 }
